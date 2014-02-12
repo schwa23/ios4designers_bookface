@@ -19,6 +19,8 @@
 		330DBEF718AB39E100B7E462 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 330DBEDF18AB39E100B7E462 /* UIKit.framework */; };
 		330DBEFF18AB39E100B7E462 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 330DBEFD18AB39E100B7E462 /* InfoPlist.strings */; };
 		330DBF0118AB39E100B7E462 /* bookfaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 330DBF0018AB39E100B7E462 /* bookfaceTests.m */; };
+		330DBF0D18AB3A0E00B7E462 /* NewsPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330DBF0B18AB3A0E00B7E462 /* NewsPostViewController.m */; };
+		330DBF0E18AB3A0E00B7E462 /* NewsPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330DBF0C18AB3A0E00B7E462 /* NewsPostViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		330DBEFC18AB39E100B7E462 /* bookfaceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "bookfaceTests-Info.plist"; sourceTree = "<group>"; };
 		330DBEFE18AB39E100B7E462 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		330DBF0018AB39E100B7E462 /* bookfaceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = bookfaceTests.m; sourceTree = "<group>"; };
+		330DBF0A18AB3A0E00B7E462 /* NewsPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsPostViewController.h; sourceTree = "<group>"; };
+		330DBF0B18AB3A0E00B7E462 /* NewsPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsPostViewController.m; sourceTree = "<group>"; };
+		330DBF0C18AB3A0E00B7E462 /* NewsPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsPostViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +116,9 @@
 				330DBEEB18AB39E100B7E462 /* AppDelegate.m */,
 				330DBEED18AB39E100B7E462 /* Images.xcassets */,
 				330DBEE218AB39E100B7E462 /* Supporting Files */,
+				330DBF0A18AB3A0E00B7E462 /* NewsPostViewController.h */,
+				330DBF0B18AB3A0E00B7E462 /* NewsPostViewController.m */,
+				330DBF0C18AB3A0E00B7E462 /* NewsPostViewController.xib */,
 			);
 			path = bookface;
 			sourceTree = "<group>";
@@ -220,6 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				330DBEE618AB39E100B7E462 /* InfoPlist.strings in Resources */,
+				330DBF0E18AB3A0E00B7E462 /* NewsPostViewController.xib in Resources */,
 				330DBEEE18AB39E100B7E462 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				330DBEEC18AB39E100B7E462 /* AppDelegate.m in Sources */,
+				330DBF0D18AB3A0E00B7E462 /* NewsPostViewController.m in Sources */,
 				330DBEE818AB39E100B7E462 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
