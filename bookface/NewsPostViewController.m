@@ -33,6 +33,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    /// customize the post container view
+    UIView *post = self.postContent;
+    post.layer.cornerRadius = 2.5f;
+    post.layer.shadowColor = [UIColor blackColor].CGColor;
+    post.layer.shadowOffset = CGSizeMake(0, 0);
+    post.layer.shadowOpacity = .05;
+    post.layer.shadowRadius = 1.5;
+    post.layer.borderWidth = .5f;
+    post.layer.borderColor = [UIColor colorWithWhite:0.0f alpha:.25].CGColor;
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 
