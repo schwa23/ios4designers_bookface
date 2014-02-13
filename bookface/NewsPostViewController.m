@@ -125,7 +125,7 @@
 }
 
 
-#pragma COMMENT BAR textfield stuffs
+#pragma keyboard stuff
 
 CGRect _originalFrame;
 
@@ -141,9 +141,13 @@ CGRect _originalFrame;
     NSTimeInterval animationDuration;
     [animationDurationValue getValue:&animationDuration];
     
-    NSValue *kbcurve = [info objectForKey:UIKeyboardAnimationCurveUserInfoKey];
-    UIViewAnimationCurve *curve;
-    [kbcurve getValue:&curve];
+    
+    //http://stackoverflow.com/questions/18957476/ios-7-keyboard-animation
+    
+    NSNumber *curveValue = info[UIKeyboardAnimationCurveUserInfoKey];
+    UIViewAnimationCurve animationCurve = curveValue.intValue;
+    
+    
     
     // If active text field is hidden by keyboard, scroll it so it's visible
     // Your app might not need or want this behavior.
@@ -152,10 +156,9 @@ CGRect _originalFrame;
     _originalFrame = aRect;
     
     aRect.origin.y = self.view.frame.size.height - kbSize.height - aRect.size.height;
-    
     [UIView animateWithDuration:(animationDuration - .05f)
                           delay:.05f
-                        options:UIViewAnimationOptionCurveEaseOut
+                        options:(animationCurve<<16) //convert to enum
                      animations:^{
                          self.commentToolbar.frame = aRect;
                      }
@@ -163,6 +166,21 @@ CGRect _originalFrame;
                          [self didFinishAnimatingField];
                      }
      ];
+    
+    //alternate: use a custome spring
+    //    [UIView animateWithDuration:.45f
+    //                          delay:0.05
+    //         usingSpringWithDamping:500.0f
+    //          initialSpringVelocity:0.0f
+    //                        options:UIViewAnimationOptionCurveLinear
+    //                     animations:^{
+    //                         self.commentToolbar.frame = aRect;
+    //                     }
+    //                     completion:^(BOOL completed) {
+    //                         [self didFinishAnimatingField];
+    //                     }
+    //     ];
+
     
 }
 
@@ -186,15 +204,14 @@ CGRect _originalFrame;
     NSValue *animationDurationValue = [info objectForKey:UIKeyboardAnimationDurationUserInfoKey];
     NSTimeInterval animationDuration;
     [animationDurationValue getValue:&animationDuration];
+   
+    NSNumber *curveValue = info[UIKeyboardAnimationCurveUserInfoKey];
+    UIViewAnimationCurve animationCurve = curveValue.intValue;
     
-    NSValue *kbcurve = [info objectForKey:UIKeyboardAnimationCurveUserInfoKey];
-    UIViewAnimationCurve *curve;
-    [kbcurve getValue:&curve];
     
-    
-    [UIView animateWithDuration:animationDuration
+    [UIView animateWithDuration:animationDuration - 0.1
                           delay:0
-                        options:UIViewAnimationOptionCurveEaseOut
+                        options:(animationCurve<<16)
                      animations:^{
                          self.commentToolbar.frame = _originalFrame;
                      }
