@@ -63,10 +63,34 @@
     self.commentField = commentField;
     UIBarButtonItem *customFieldView = [[UIBarButtonItem alloc] initWithCustomView:commentField];
     
+    SEL postsel = @selector(postComment:);
     
-    [cbar setItems:@[customFieldView] animated:YES];
+    UIBarButtonItem *postButton;
+    postButton = [[UIBarButtonItem alloc] initWithTitle:@"Post"
+                                                  style:UIBarButtonItemStylePlain
+                                                 target:self
+                                                 action:postsel
+                  ];
+    
+    
+    [commentField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    
+    
+    [postButton setEnabled:NO];
+    [cbar setItems:@[customFieldView, postButton] animated:YES];
+    
     
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)textFieldDidChange:(id)sender{
+ 
+    if(![self.commentField.text  isEqual: @""] ) {
+        [self.commentToolbar.items[1] setEnabled:YES];
+    } else {
+        [self.commentToolbar.items[1] setEnabled:NO];
+
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,6 +101,15 @@
 
 - (IBAction)onTap:(id)sender {
     [self.commentField endEditing:YES];
+}
+
+- (void)postComment:(id)sender {
+    
+    //post the comment and clear the text field.
+    [self.commentField endEditing:YES];
+    [self.commentField setText:@""];
+    [self textFieldDidChange:self];
+
 }
 
 - (void)registerForKeyboardNotifications
