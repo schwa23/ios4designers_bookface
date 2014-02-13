@@ -6,7 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsPostViewController">
             <connections>
-                <outlet property="commentBar" destination="tab-zh-n1C" id="p3t-ZB-Do5"/>
+                <outlet property="commentToolbar" destination="umO-SF-F7c" id="yhO-hd-wTE"/>
                 <outlet property="navbar" destination="8fq-WU-awS" id="2i7-RY-HS9"/>
                 <outlet property="postContainer" destination="d01-1m-Dt0" id="JKr-nr-2FK"/>
                 <outlet property="postContent" destination="HQq-pd-Yqn" id="XWH-qZ-FKn"/>
@@ -37,17 +37,24 @@
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.82745098039215681" green="0.83921568627450982" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="uBU-BU-eHu" appends="YES" id="46c-p4-css"/>
+                    </connections>
                 </view>
-                <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="commentbar" translatesAutoresizingMaskIntoConstraints="NO" id="tab-zh-n1C">
-                    <rect key="frame" x="0.0" y="479" width="320" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tabbar" translatesAutoresizingMaskIntoConstraints="NO" id="eT2-kV-XBP">
-                    <rect key="frame" x="0.0" y="523" width="320" height="45"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="navbar" translatesAutoresizingMaskIntoConstraints="NO" id="8fq-WU-awS">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="uBU-BU-eHu" appends="YES" id="xiG-ef-ufl"/>
+                    </connections>
+                </imageView>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="umO-SF-F7c">
+                    <rect key="frame" x="0.0" y="480" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items/>
+                </toolbar>
+                <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tabbar" translatesAutoresizingMaskIntoConstraints="NO" id="eT2-kV-XBP">
+                    <rect key="frame" x="0.0" y="523" width="320" height="45"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
             </subviews>
@@ -55,9 +62,13 @@
             <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
+        <tapGestureRecognizer id="uBU-BU-eHu">
+            <connections>
+                <action selector="onTap:" destination="-1" id="NJR-Fg-Xb2"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
-        <image name="commentbar" width="320" height="44"/>
         <image name="navbar" width="320" height="64"/>
         <image name="post_contents" width="280" height="392"/>
         <image name="tabbar" width="320" height="44"/>
