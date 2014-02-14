@@ -7,12 +7,17 @@
 //
 
 #import "NewsPostViewController.h"
-#import "PostContentViewController.h"
 
 @interface NewsPostViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *tabbar;
 @property (weak, nonatomic) IBOutlet UIToolbar *commentToolbar;
 @property (weak, nonatomic) UITextField *commentField;
+@property (weak, nonatomic) IBOutlet UIView *postContentView;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImage;
+@property (weak, nonatomic) IBOutlet UILabel *postBody;
+@property (weak, nonatomic) IBOutlet UIImageView *postImage;
+
+
 
 
 - (IBAction)onTap:(id)sender;
@@ -38,19 +43,15 @@
     [super viewDidLoad];
     [self registerForKeyboardNotifications];
     
-    PostContentViewController *postContentVC = [[PostContentViewController alloc] init];
-    
-    [self addChildViewController:postContentVC];
-    [self.view insertSubview:postContentVC.view atIndex:0];
-    [postContentVC didMoveToParentViewController:self];
+    [self initPostContentView];
     
     
     UIToolbar *cbar = self.commentToolbar;
     
     //create a text field and add it to the toolbar as a bar button item
-    UITextField *commentField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 220, 32)];
+    UITextField *commentField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 240, 32)];
     commentField.borderStyle = UITextBorderStyleRoundedRect;
-    commentField.background = [[UIImage alloc] initWithContentsOfFile:@"textfieldBackground"];
+    
     commentField.placeholder = @"Write a comment…";
     self.commentField = commentField;
     UIBarButtonItem *customFieldView = [[UIBarButtonItem alloc] initWithCustomView:commentField];
@@ -73,6 +74,32 @@
     
     
     // Do any additional setup after loading the view from its nib.
+}
+
+-(void)initPostContentView {
+    
+    //create a background view image  for the shadow and white bgcolor
+    CGRect viewFrame = self.postContentView.frame;
+    //    viewFrame.size.width = viewFrame.size.width;
+    //    viewFrame.size.height = viewFrame.size.height - 20;
+    viewFrame.origin.x -= 10;
+    viewFrame.origin.y -= 20;
+    
+    /// customize the post container view
+    UIView *postBackground = [[UIView alloc] initWithFrame: viewFrame];
+    postBackground.layer.cornerRadius = 2.5f;
+    postBackground.layer.shadowColor = [UIColor blackColor].CGColor;
+    postBackground.layer.shadowOffset = CGSizeMake(0, 0);
+    postBackground.layer.shadowOpacity = .05;
+    postBackground.layer.shadowRadius = 1.5;
+    postBackground.layer.borderWidth = .5f;
+    postBackground.layer.borderColor = [UIColor colorWithWhite:0.0f alpha:.25].CGColor;
+    postBackground.backgroundColor = [UIColor whiteColor];
+    [self.postContentView insertSubview:postBackground atIndex:0];
+    
+    [self.postBody sizeToFit];
+
+    
 }
 
 -(void)textFieldDidChange:(id)sender{
