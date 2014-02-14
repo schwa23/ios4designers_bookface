@@ -16,10 +16,28 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
+   
+    
     NewsPostViewController *newsPostView = [[NewsPostViewController alloc] init];
-    self.window.rootViewController = newsPostView;
+    NewsPostViewController *firstNewsPostView = [[NewsPostViewController alloc] init];
+
     
+     UINavigationController *navController = [[UINavigationController alloc] init];
     
+    navController.navigationBar.barTintColor = [UIColor
+                                                colorWithRed:68.0/255.0
+                                                green: 99.0/255.0
+                                                    blue: 161.0/255.0
+                                                    alpha:1.0];
+    navController.navigationBar.tintColor = [UIColor whiteColor];
+    navController.navigationBar.translucent = NO;
+    navController.navigationBar.titleTextAttributes = [[NSDictionary alloc] initWithObjects:@[[UIColor whiteColor]] forKeys:@[NSForegroundColorAttributeName]];
+    
+    firstNewsPostView.title = @"";
+    newsPostView.title = @"Post";
+    [navController setViewControllers:@[firstNewsPostView,newsPostView] animated:NO];
+    
+    self.window.rootViewController = navController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

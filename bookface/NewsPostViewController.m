@@ -7,14 +7,10 @@
 //
 
 #import "NewsPostViewController.h"
+#import "PostContentViewController.h"
 
 @interface NewsPostViewController ()
-@property (weak, nonatomic) IBOutlet UIImageView *navbar;
-@property (weak, nonatomic) IBOutlet UIView *postContainer;
-@property (weak, nonatomic) IBOutlet UIImageView *commentBar;
 @property (weak, nonatomic) IBOutlet UIImageView *tabbar;
-@property (weak, nonatomic) IBOutlet UIView *postContent;
-@property (weak, nonatomic) IBOutlet UIImageView *postImage;
 @property (weak, nonatomic) IBOutlet UIToolbar *commentToolbar;
 @property (weak, nonatomic) UITextField *commentField;
 
@@ -42,15 +38,11 @@
     [super viewDidLoad];
     [self registerForKeyboardNotifications];
     
-    /// customize the post container view
-    UIView *post = self.postContent;
-    post.layer.cornerRadius = 2.5f;
-    post.layer.shadowColor = [UIColor blackColor].CGColor;
-    post.layer.shadowOffset = CGSizeMake(0, 0);
-    post.layer.shadowOpacity = .05;
-    post.layer.shadowRadius = 1.5;
-    post.layer.borderWidth = .5f;
-    post.layer.borderColor = [UIColor colorWithWhite:0.0f alpha:.25].CGColor;
+    PostContentViewController *postContentVC = [[PostContentViewController alloc] init];
+    
+    [self addChildViewController:postContentVC];
+    [self.view insertSubview:postContentVC.view atIndex:0];
+    [postContentVC didMoveToParentViewController:self];
     
     
     UIToolbar *cbar = self.commentToolbar;
