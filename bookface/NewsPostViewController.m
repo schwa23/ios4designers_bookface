@@ -17,10 +17,21 @@
 @property (weak, nonatomic) IBOutlet UILabel *postBody;
 @property (weak, nonatomic) IBOutlet UIImageView *postImage;
 
+@property (weak, nonatomic) IBOutlet UIView *postActionsBar;
 
+@property (weak, nonatomic) IBOutlet UIButton *postLikeBtn;
+@property (weak, nonatomic) IBOutlet UIButton *postCommentBtn;
+@property (weak, nonatomic) IBOutlet UIButton *postShareBtn;
+
+
+@property(nonatomic) BOOL isPostLiked;
 
 
 - (IBAction)onTap:(id)sender;
+- (IBAction)onLikeButtonTap:(id)sender;
+- (IBAction)onCommentButtonTap:(id)sender;
+- (IBAction)onShareButtonTap:(id)sender;
+
 
 
 @end
@@ -73,6 +84,13 @@
     [cbar setItems:@[customFieldView, postButton] animated:YES];
     
     
+    UIImage *postActionBg = [UIImage imageNamed:@"bar_bg_rpt"];
+    
+    self.postActionsBar.backgroundColor = [UIColor colorWithPatternImage:postActionBg];
+    
+    
+    //make sure the like button gets the right bg image in both states
+    [self.postLikeBtn setBackgroundImage:[UIImage imageNamed:@"bar_bg_rpt_highlight"] forState:UIControlStateSelected | UIControlStateHighlighted];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -81,9 +99,12 @@
     //create a background view image  for the shadow and white bgcolor
     CGRect viewFrame = self.postContentView.frame;
     //    viewFrame.size.width = viewFrame.size.width;
-    //    viewFrame.size.height = viewFrame.size.height - 20;
-    viewFrame.origin.x -= 10;
-    viewFrame.origin.y -= 20;
+//    //    viewFrame.size.height = viewFrame.size.height - 20;
+
+    viewFrame.origin.x = -.5;
+    viewFrame.origin.y = -.5;
+    viewFrame.size.width += 1;
+    viewFrame.size.height += 1;
     
     /// customize the post container view
     UIView *postBackground = [[UIView alloc] initWithFrame: viewFrame];
@@ -94,9 +115,9 @@
     postBackground.layer.shadowRadius = 1.5;
     postBackground.layer.borderWidth = .5f;
     postBackground.layer.borderColor = [UIColor colorWithWhite:0.0f alpha:.25].CGColor;
-    postBackground.backgroundColor = [UIColor whiteColor];
+    postBackground.backgroundColor = [UIColor colorWithWhite:1.0 alpha:1.0];
     [self.postContentView insertSubview:postBackground atIndex:0];
-    
+    self.postContentView.backgroundColor = [UIColor clearColor];
     [self.postBody sizeToFit];
 
     
@@ -118,8 +139,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)onCommentButtonTap:(id)sender {
+    [self.commentField becomeFirstResponder];
+}
+
+- (IBAction)onShareButtonTap:(id)sender {
+}
+
 - (IBAction)onTap:(id)sender {
+    
     [self.commentField endEditing:YES];
+}
+
+- (IBAction)onLikeButtonTap:(id)sender {
+    
+        self.postLikeBtn.selected = !self.isPostLiked;
+        self.isPostLiked = !self.isPostLiked;
 }
 
 - (void)postComment:(id)sender {

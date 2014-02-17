@@ -7,9 +7,13 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewsPostViewController">
             <connections>
                 <outlet property="commentToolbar" destination="umO-SF-F7c" id="yhO-hd-wTE"/>
+                <outlet property="postActionsBar" destination="42m-xn-Iss" id="1UW-X7-fJa"/>
                 <outlet property="postBody" destination="QqQ-C1-84o" id="r1D-Ku-S06"/>
+                <outlet property="postCommentBtn" destination="atD-25-gm1" id="Ldl-88-RzF"/>
                 <outlet property="postContentView" destination="K1n-Tq-vLu" id="NoV-tY-Ult"/>
                 <outlet property="postImage" destination="pzW-pa-glM" id="yL5-hf-qzg"/>
+                <outlet property="postLikeBtn" destination="jBK-TI-xEB" id="uSJ-Jy-6OK"/>
+                <outlet property="postShareBtn" destination="4fB-5t-ZAk" id="6CS-9u-wss"/>
                 <outlet property="profileImage" destination="kqY-zF-s3V" id="HGP-il-wGN"/>
                 <outlet property="tabbar" destination="eT2-kV-XBP" id="gRL-Pu-a7J"/>
                 <outlet property="view" destination="1" id="3"/>
@@ -21,22 +25,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1n-Tq-vLu" userLabel="postContentView">
-                    <rect key="frame" x="9" y="15" width="302" height="401"/>
+                    <rect key="frame" x="10" y="15" width="300" height="370"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Her" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjX-5T-XRh">
-                            <rect key="frame" x="52" y="9" width="112" height="21"/>
+                            <rect key="frame" x="52" y="10" width="112" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="her_profile_image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kqY-zF-s3V">
-                            <rect key="frame" x="10" y="9" width="34" height="34"/>
+                            <rect key="frame" x="10" y="10" width="34" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6i0-s0-DbV">
-                            <rect key="frame" x="52" y="25" width="112" height="22"/>
+                            <rect key="frame" x="52" y="26" width="112" height="22"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <state key="normal" title="15 hours ago">
@@ -44,8 +48,8 @@
                                 <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
-                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="282" translatesAutoresizingMaskIntoConstraints="NO" id="QqQ-C1-84o">
-                            <rect key="frame" x="10" y="44" width="282" height="87"/>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="QqQ-C1-84o">
+                            <rect key="frame" x="10" y="40" width="280" height="87"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <attributedString key="attributedText">
                                 <fragment content="From collarless shirts to high-waisted pants,">
@@ -105,11 +109,75 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="her_image.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pzW-pa-glM">
-                            <rect key="frame" x="-10" y="132" width="322" height="187"/>
+                            <rect key="frame" x="-5" y="124" width="309" height="175"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42m-xn-Iss">
+                            <rect key="frame" x="0.0" y="309" width="300" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jBK-TI-xEB">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="41"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                    <inset key="titleEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                    <state key="normal" title="Like" image="like_btn">
+                                        <color key="titleColor" red="0.50588235290000005" green="0.51764705879999995" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="selected" image="like_btn_selected">
+                                        <color key="titleColor" red="0.30588235294117649" green="0.49803921568627452" blue="0.8784313725490196" alpha="1" colorSpace="deviceRGB"/>
+                                    </state>
+                                    <state key="highlighted" backgroundImage="bar_bg_rpt_highlight">
+                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onLikeButtonTap:" destination="-1" eventType="touchUpInside" id="Uv8-SD-9m0"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atD-25-gm1">
+                                    <rect key="frame" x="100" y="0.0" width="100" height="41"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                    <inset key="titleEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                    <state key="normal" title="Comment" image="comment_btn">
+                                        <color key="titleColor" red="0.50588235290000005" green="0.51764705879999995" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted" backgroundImage="bar_bg_rpt_highlight">
+                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onCommentButtonTap:" destination="-1" eventType="touchUpInside" id="djp-47-OPE"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fB-5t-ZAk">
+                                    <rect key="frame" x="200" y="0.0" width="100" height="41"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                    <inset key="titleEdgeInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                                    <state key="normal" title="Share" image="share_btn">
+                                        <color key="titleColor" red="0.50588235290000005" green="0.51764705879999995" blue="0.5450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <state key="highlighted" backgroundImage="bar_bg_rpt_highlight">
+                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="onShareButtonTap:" destination="-1" eventType="touchUpInside" id="6AF-pS-mek"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        </view>
                     </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outletCollection property="gestureRecognizers" destination="uBU-BU-eHu" appends="YES" id="vfp-nW-wXe"/>
                     </connections>
@@ -136,8 +204,13 @@
         </tapGestureRecognizer>
     </objects>
     <resources>
+        <image name="bar_bg_rpt_highlight" width="1" height="41"/>
+        <image name="comment_btn" width="17" height="40"/>
         <image name="her_image.jpg" width="2048" height="1152"/>
         <image name="her_profile_image.jpg" width="50" height="50"/>
+        <image name="like_btn" width="17" height="40"/>
+        <image name="like_btn_selected" width="17" height="40"/>
+        <image name="share_btn" width="17" height="40"/>
         <image name="tabbar" width="320" height="44"/>
     </resources>
 </document>
