@@ -33,6 +33,8 @@
 - (IBAction)onShareButtonTap:(id)sender;
 
 
+-(void)submitComment:(id)sender;
+-(void)sharePost:(id)sender;
 
 @end
 
@@ -67,7 +69,7 @@
     self.commentField = commentField;
     UIBarButtonItem *customFieldView = [[UIBarButtonItem alloc] initWithCustomView:commentField];
     
-    SEL postsel = @selector(postComment:);
+    SEL postsel = @selector(submitComment:);
     
     UIBarButtonItem *postButton;
     postButton = [[UIBarButtonItem alloc] initWithTitle:@"Post"
@@ -91,7 +93,12 @@
     
     //make sure the like button gets the right bg image in both states
     [self.postLikeBtn setBackgroundImage:[UIImage imageNamed:@"bar_bg_rpt_highlight"] forState:UIControlStateSelected | UIControlStateHighlighted];
-    // Do any additional setup after loading the view from its nib.
+    
+    
+    //add a share button to the navbar
+    UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(sharePost:)];
+    [self.navigationItem setRightBarButtonItem:shareButton animated:YES];
+    
 }
 
 -(void)initPostContentView {
@@ -144,6 +151,7 @@
 }
 
 - (IBAction)onShareButtonTap:(id)sender {
+    [self sharePost:sender];
 }
 
 - (IBAction)onTap:(id)sender {
@@ -157,13 +165,27 @@
         self.isPostLiked = !self.isPostLiked;
 }
 
-- (void)postComment:(id)sender {
+- (void)submitComment:(id)sender {
     
     //post the comment and clear the text field.
     [self.commentField endEditing:YES];
     [self.commentField setText:@""];
     [self textFieldDidChange:self];
 
+}
+
+-(void)sharePost:(id)sender {
+    
+    UIAlertView *shareDialog = [[UIAlertView alloc] initWithTitle:@"Share Post" message:@"" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Share to Timeline",@"Post to Twitter",@"Save to Reading List", nil];
+    
+    [shareDialog show];
+    
+    NSLog(@"share button tapped");
+    
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    NSLog(@"Clicked button: %@", [alertView buttonTitleAtIndex:buttonIndex]);
 }
 
 - (void)registerForKeyboardNotifications
