@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "NewsPostViewController.h"
+#import "FeedViewController.h"
 
 @implementation AppDelegate
 
@@ -19,10 +20,9 @@
    
     
     NewsPostViewController *newsPostView = [[NewsPostViewController alloc] init];
-    NewsPostViewController *firstNewsPostView = [[NewsPostViewController alloc] init];
+    FeedViewController *feedView = [[FeedViewController alloc] init];
 
-    
-     UINavigationController *navController = [[UINavigationController alloc] init];
+    UINavigationController *navController = [[UINavigationController alloc] init];
     
     navController.navigationBar.barTintColor = [UIColor
                                                 colorWithRed:68.0/255.0
@@ -33,9 +33,9 @@
     navController.navigationBar.translucent = NO;
     navController.navigationBar.titleTextAttributes = [[NSDictionary alloc] initWithObjects:@[[UIColor whiteColor]] forKeys:@[NSForegroundColorAttributeName]];
     
-    firstNewsPostView.title = @"";
+    feedView.title = @"";
     newsPostView.title = @"Post";
-    [navController setViewControllers:@[firstNewsPostView,newsPostView] animated:NO];
+    [navController setViewControllers:@[feedView,newsPostView] animated:NO];
     
     self.window.rootViewController = navController;
     self.window.backgroundColor = [UIColor whiteColor];

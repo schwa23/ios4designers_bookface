@@ -83,6 +83,11 @@
     
     
     [postButton setEnabled:NO];
+    
+    
+//    UIBarButtonItem *cameraButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCamera target:self action:@selector(addImage:) ];
+//    ]
+    
     [cbar setItems:@[customFieldView, postButton] animated:YES];
     
     
@@ -99,6 +104,17 @@
     UIBarButtonItem *shareButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAction target:self action:@selector(sharePost:)];
     [self.navigationItem setRightBarButtonItem:shareButton animated:YES];
     
+    
+//    //clear the back button title
+//    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] init];
+//    [backButton setTitle:@"oof"];
+//    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@" " style:UIBarButtonItemStylePlain target:self.navigationController action:nil];
+//    
+//    [self.navigationItem setBackBarButtonItem:backButton];
+//    self.navigationItem.backBarButtonItem = backButton; //clear the title in the back button
+    
+    
+    [self setTitle:@"Post"];
 }
 
 -(void)initPostContentView {
@@ -128,6 +144,11 @@
     [self.postBody sizeToFit];
 
     
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+
+ 
 }
 
 -(void)textFieldDidChange:(id)sender{

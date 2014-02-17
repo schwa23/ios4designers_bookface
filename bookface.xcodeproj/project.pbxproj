@@ -23,6 +23,8 @@
 		330DBF0E18AB3A0E00B7E462 /* NewsPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330DBF0C18AB3A0E00B7E462 /* NewsPostViewController.xib */; };
 		33317B8318ADE42200CB3DFD /* her_profile_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33317B8118ADE42200CB3DFD /* her_profile_image.jpg */; };
 		33317B8418ADE42200CB3DFD /* her_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33317B8218ADE42200CB3DFD /* her_image.jpg */; };
+		3397355C18B1E72500A4C106 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3397355A18B1E72500A4C106 /* FeedViewController.m */; };
+		3397355D18B1E72500A4C106 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3397355B18B1E72500A4C106 /* FeedViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,9 @@
 		330DBF0C18AB3A0E00B7E462 /* NewsPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsPostViewController.xib; sourceTree = "<group>"; };
 		33317B8118ADE42200CB3DFD /* her_profile_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = her_profile_image.jpg; sourceTree = "<group>"; };
 		33317B8218ADE42200CB3DFD /* her_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = her_image.jpg; sourceTree = "<group>"; };
+		3397355918B1E72500A4C106 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
+		3397355A18B1E72500A4C106 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
+		3397355B18B1E72500A4C106 /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +130,9 @@
 				330DBF0A18AB3A0E00B7E462 /* NewsPostViewController.h */,
 				330DBF0B18AB3A0E00B7E462 /* NewsPostViewController.m */,
 				330DBF0C18AB3A0E00B7E462 /* NewsPostViewController.xib */,
+				3397355918B1E72500A4C106 /* FeedViewController.h */,
+				3397355A18B1E72500A4C106 /* FeedViewController.m */,
+				3397355B18B1E72500A4C106 /* FeedViewController.xib */,
 			);
 			path = bookface;
 			sourceTree = "<group>";
@@ -237,6 +245,7 @@
 				33317B8318ADE42200CB3DFD /* her_profile_image.jpg in Resources */,
 				330DBF0E18AB3A0E00B7E462 /* NewsPostViewController.xib in Resources */,
 				330DBEEE18AB39E100B7E462 /* Images.xcassets in Resources */,
+				3397355D18B1E72500A4C106 /* FeedViewController.xib in Resources */,
 				33317B8418ADE42200CB3DFD /* her_image.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +267,7 @@
 			files = (
 				330DBEEC18AB39E100B7E462 /* AppDelegate.m in Sources */,
 				330DBF0D18AB3A0E00B7E462 /* NewsPostViewController.m in Sources */,
+				3397355C18B1E72500A4C106 /* FeedViewController.m in Sources */,
 				330DBEE818AB39E100B7E462 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
