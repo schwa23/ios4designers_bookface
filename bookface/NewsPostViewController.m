@@ -77,7 +77,7 @@
                                                  target:self
                                                  action:postsel
                   ];
-    
+    [postButton setTitleTextAttributes:@{NSFontAttributeName: [UIFont boldSystemFontOfSize:17]} forState:UIControlStateNormal];
     
     [commentField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     
