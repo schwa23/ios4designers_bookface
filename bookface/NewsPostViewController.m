@@ -142,7 +142,25 @@
     [self.postContentView insertSubview:postBackground atIndex:0];
     self.postContentView.backgroundColor = [UIColor clearColor];
     [self.postBody sizeToFit];
+    
+    
+    UIImageView *postImage = self.postImage;
 
+    [postImage.layer setShadowPath:[[UIBezierPath
+                               bezierPathWithRect:postImage.bounds] CGPath]];
+    [self applyStandardShadowToLayer:postImage.layer];
+
+    
+}
+
+     -(void) applyStandardShadowToLayer:(CALayer*)layer {
+    
+    layer.shadowColor = [UIColor blackColor].CGColor;
+    layer.shadowOffset = CGSizeMake(0, 1);
+    layer.shadowOpacity = .35;
+    layer.shadowRadius = 1.5;
+   
+    
     
 }
 
