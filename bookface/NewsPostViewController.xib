@@ -25,7 +25,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K1n-Tq-vLu" userLabel="postContentView">
-                    <rect key="frame" x="10" y="15" width="300" height="370"/>
+                    <rect key="frame" x="10" y="15" width="300" height="391"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Her" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rjX-5T-XRh">
@@ -176,6 +176,29 @@
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         </view>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L4R-k6-UAe">
+                            <rect key="frame" x="10" y="360" width="270" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <attributedString key="attributedText">
+                                <fragment content="1,694 people ">
+                                    <attributes>
+                                        <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <font key="NSFont" size="14" name="HelveticaNeue-Medium"/>
+                                        <font key="NSOriginalFont" size="14" name="HelveticaNeue-Medium"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="like this.">
+                                    <attributes>
+                                        <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                        <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
