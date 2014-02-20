@@ -10,4 +10,5 @@
 
 @interface NewsPostViewController : UIViewController
 
+-(id)initWithTitle:(NSString *)title;
 @end

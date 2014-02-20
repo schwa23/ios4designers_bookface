@@ -10,6 +10,11 @@
 #import "NewsPostViewController.h"
 #import "FeedViewController.h"
 
+@interface AppDelegate ()
+
+
+@end
+
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -35,9 +40,18 @@
     
     feedView.title = @"";
     newsPostView.title = @"Post";
-    [navController setViewControllers:@[feedView,newsPostView] animated:NO];
+//    [navController setViewControllers:@[feedView,newsPostView] animated:NO];
+    [navController setViewControllers:@[feedView] animated:NO];
+    [navController.tabBarItem setImage:[UIImage imageNamed:@"feed_tab_img"]];
+    [navController.tabBarItem setTitle:@"News Feed"];
     
-    self.window.rootViewController = navController;
+
+    
+    UITabBarController *tabBarController =[[UITabBarController alloc] init];
+    
+    [tabBarController setViewControllers:@[navController]];
+    
+    self.window.rootViewController = tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
