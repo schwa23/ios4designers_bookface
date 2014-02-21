@@ -34,11 +34,10 @@
         // Custom initialization
         
         self.feeddata = @[
-                          @{@"image": @"image1", @"body":@"foobar", @"message":@"Hi there"},
-                           @{@"image": @"image2", @"body":@"barzap", @"message":@"Hi what"},
-                           @{@"image": @"image3", @"body":@"wah", @"message":@"Hi whozit"},
-                           @{@"image": @"image4", @"body":@"eek", @"message":@"Hi whenzit"}
-                            
+                          @{@"image": @"image1", @"body":@"Joshua Dickens posted a photo.", @"updatedTime":@"3 minutes ago"},
+                           @{@"image": @"image1", @"body":@"Joshua Dickens posted a photo.", @"updatedTime":@"3 minutes ago"},
+                          @{@"image": @"image1", @"body":@"Joshua Dickens posted a photo.", @"updatedTime":@"3 minutes ago"},
+                           @{@"image": @"image1", @"body":@"Joshua Dickens posted a photo.", @"updatedTime":@"3 minutes ago"}
                             
                             ];
     }
@@ -62,6 +61,7 @@
     
     self.feedTableView.dataSource = self;
     self.feedTableView.delegate = self;
+    
     [[self feedTableView] registerNib:[UINib nibWithNibName:@"FeedCell" bundle:nil] forCellReuseIdentifier:@"FeedListCell"];
 
     
@@ -96,19 +96,22 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    
-    
     FeedCell *cell = (FeedCell *)[tableView dequeueReusableCellWithIdentifier:@"FeedListCell"];
     
     
     NSString *body = self.feeddata[indexPath.row][@"body"];
+    NSString *updateTime = self.feeddata[indexPath.row][@"updatedDate"];
     
-    cell.textLabel.text = body;
+    cell.notificationBodyLabel.text = body;
+    cell.updateTimeLabel.text =updateTime;
     return cell;
     
     
 }
 
+- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80;
+}
 
 
 //- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
