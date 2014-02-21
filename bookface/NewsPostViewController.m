@@ -7,6 +7,7 @@
 //
 
 #import "NewsPostViewController.h"
+#import "Notification.h"
 
 @interface NewsPostViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *tabbar;
@@ -17,6 +18,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *postBody;
 @property (weak, nonatomic) IBOutlet UIImageView *postImage;
 @property (weak, nonatomic) IBOutlet UILabel *postTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *updatedTimeLabel;
+
+@property (strong, nonatomic) NSString* updatedTime;
 
 
 @property (weak, nonatomic) IBOutlet UIView *postActionsBar;
@@ -66,6 +70,20 @@
     return self;
 }
 
+
+-(id)initWIthNotification:(Notification *)notification {
+    self = [super initWithNibName:nil bundle:nil];
+    
+    if (self) {
+        self.title = notification.body;
+        self.updatedTime = notification.updatedTime;
+        
+    }
+    return self;
+}
+
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -74,6 +92,7 @@
     [self initPostContentView];
     
     self.postTitleLabel.text = self.title;
+    self.updatedTimeLabel.text = self.updatedTime;
     
     UIToolbar *cbar = self.commentToolbar;
     

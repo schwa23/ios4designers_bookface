@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Notification.h"
 
 @interface NewsPostViewController : UIViewController
 
 -(id)initWithTitle:(NSString *)title;
+-(id)initWIthNotification:(Notification *)notification;
+
 @end

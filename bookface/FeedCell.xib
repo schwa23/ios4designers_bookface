@@ -54,7 +54,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="notificationBodyLabel" destination="UYB-O6-XcR" id="cIW-Vt-ijn"/>
-                <outlet property="notificationTypeImageView" destination="ISo-PP-aei" id="Qi2-ip-m4s"/>
+                <outlet property="notificationIconView" destination="ISo-PP-aei" id="QKF-G0-8YO"/>
                 <outlet property="personImageView" destination="Qve-my-LAG" id="FrF-q0-ZWI"/>
                 <outlet property="updateTimeLabel" destination="PSf-TN-2Pq" id="H3C-A6-APs"/>
             </connections>

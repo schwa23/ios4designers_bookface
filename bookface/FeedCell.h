@@ -12,6 +12,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *personImageView;
 @property (weak, nonatomic) IBOutlet UILabel *notificationBodyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *updateTimeLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *notificationTypeImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *notificationIconView;
 
 @end

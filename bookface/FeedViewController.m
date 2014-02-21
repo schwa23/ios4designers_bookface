@@ -9,9 +9,10 @@
 #import "FeedViewController.h"
 #import "NewsPostViewController.h"
 #import "FeedCell.h"
+#import "Notification.h"
 
 @interface FeedViewController ()
-@property (weak, nonatomic) IBOutlet UITableView *feedTableView;
+@property (weak, nonatomic) IBOutlet UITableView *view;
 
 @property (strong, nonatomic) NSArray *feeddata;
 
@@ -24,25 +25,29 @@
 
 @implementation FeedViewController
 
-
-
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (id)initWithStyle:(UITableViewStyle)style
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
-        
-        self.feeddata = @[
-                          @{@"image": @"image1", @"body":@"Joshua Dickens posted a photo.", @"updatedTime":@"3 minutes ago"},
-                           @{@"image": @"image1", @"body":@"Joshua Dickens posted a photo.", @"updatedTime":@"3 minutes ago"},
-                          @{@"image": @"image1", @"body":@"Joshua Dickens posted a photo.", @"updatedTime":@"3 minutes ago"},
-                           @{@"image": @"image1", @"body":@"Joshua Dickens posted a photo.", @"updatedTime":@"3 minutes ago"}
-                            
-                            ];
+       self.feeddata = [Notification fakeNotifications];
     }
     return self;
 }
+//
+//
+//
+//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//{
+//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self) {
+//        // Custom initialization
+//        
+//        self.feeddata = [Notification fakeNotifications];
+//    }
+//    return self;
+//}
+
+
 
 - (void)viewDidLoad
 {
@@ -59,18 +64,20 @@
     [self.navigationItem setBackBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:self action:nil]];
 
     
-    self.feedTableView.dataSource = self;
-    self.feedTableView.delegate = self;
+//    self.feedTableView.dataSource = self;
+//    self.feedTableView.delegate = self;
     
-    [[self feedTableView] registerNib:[UINib nibWithNibName:@"FeedCell" bundle:nil] forCellReuseIdentifier:@"FeedListCell"];
-
+    [[self view] registerNib:[UINib nibWithNibName:@"FeedCell" bundle:nil] forCellReuseIdentifier:@"FeedListCell"];
     
-    // Do any additional setup after loading the view from its nib.
+    self.clearsSelectionOnViewWillAppear = YES;
+    
+    self.view.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated  {
-//    [self.navigationItem setTitle:@"News Feed"];
-
+    [super viewWillAppear:animated];
+    
 }
 
 -(void)showList:(id)sender{
@@ -98,12 +105,10 @@
     
     FeedCell *cell = (FeedCell *)[tableView dequeueReusableCellWithIdentifier:@"FeedListCell"];
     
+    Notification *not = self.feeddata[indexPath.row];
     
-    NSString *body = self.feeddata[indexPath.row][@"body"];
-    NSString *updateTime = self.feeddata[indexPath.row][@"updatedDate"];
-    
-    cell.notificationBodyLabel.text = body;
-    cell.updateTimeLabel.text =updateTime;
+    cell.notificationBodyLabel.text = not.body;
+    cell.updateTimeLabel.text = not.updatedTime;
     return cell;
     
     
@@ -120,9 +125,15 @@
 //}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    NewsPostViewController *postView = [[NewsPostViewController alloc] initWithTitle:(self.feeddata[indexPath.row][@"body"])];
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    Notification *not = self.feeddata[indexPath.row];
+    NewsPostViewController *postView = [[NewsPostViewController alloc] initWIthNotification:not];
     [self.navigationController pushViewController:postView animated:YES];
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"DID DESELECT");
 }
 
 #pragma mark - private methods
