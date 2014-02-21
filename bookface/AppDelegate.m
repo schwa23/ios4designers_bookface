@@ -45,6 +45,9 @@
     [navController.tabBarItem setImage:[UIImage imageNamed:@"feed_tab_img"]];
     [navController.tabBarItem setTitle:@"News Feed"];
     
+    
+    
+    
 
     
     UITabBarController *tabBarController =[[UITabBarController alloc] init];

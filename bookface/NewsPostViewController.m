@@ -80,6 +80,7 @@
     //create a text field and add it to the toolbar as a bar button item
     UITextField *commentField = [[UITextField alloc] initWithFrame:CGRectMake(0, 0, 240, 32)];
     commentField.borderStyle = UITextBorderStyleRoundedRect;
+    [commentField setAutoresizingMask:UIViewAutoresizingFlexibleWidth];
     
     commentField.placeholder = @"Write a comment…";
     self.commentField = commentField;
@@ -104,7 +105,13 @@
     CGRect commentbarFrame = self.commentToolbar.frame;
     CGRect tabbarFrame = self.tabBarController.tabBar.frame;
     commentbarFrame.origin = CGPointMake(commentbarFrame.origin.x, tabbarFrame.origin.y - commentbarFrame.size.height);
+    
+    
+    
+//     commentbarFrame= CGRectMake(commentbarFrame.origin.x, self.view.frame.size.height - commentbarFrame.size.height - self.bottomLayoutGuide.length,commentbarFrame.size.width, commentbarFrame.size.height);
+    
     self.commentToolbar.frame = commentbarFrame;
+//    [self.commentToolbar setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin];
     NSLog(@"Comment bar.frame.origin.y %f", commentbarFrame.origin.y);
 
     
@@ -269,6 +276,8 @@
 
 #pragma mark - keyboard stuff
 
+CGRect _originalFrame;
+
 // Called when the UIKeyboardWillShowNotification is sent.
 - (void)keyboardWillBeShown:(NSNotification*)aNotification
 {
@@ -292,6 +301,7 @@
     // If active text field is hidden by keyboard, scroll it so it's visible
     
     CGRect aRect = self.commentToolbar.frame;
+    _originalFrame = aRect;
     
     aRect.origin.y = self.view.frame.size.height - kbSize.height - aRect.size.height;
     NSLog(@"/// willbeshown: commentbar.origin.y %f", aRect.origin.y);
@@ -348,12 +358,10 @@
     UIViewAnimationCurve animationCurve = curveValue.intValue;
     
     CGRect curFrame =self.commentToolbar.frame;
-    CGRect tabbarFrame = self.tabBarController.tabBar.frame;
     
-    curFrame =   CGRectMake(curFrame.origin.x, tabbarFrame.origin.y - curFrame.size.height,curFrame.size.width, curFrame.size.height);
-    NSLog(@"//--will be hidden: origin %f",curFrame.origin.y);
+    curFrame =    CGRectMake(curFrame.origin.x, self.view.frame.size.height - curFrame.size.height - self.bottomLayoutGuide.length,curFrame.size.width, curFrame.size.height);
     
-//    [self.commentToolbar setAutoresizingMask:UIViewAutoresizingNone];
+    
     
     [UIView animateWithDuration:animationDuration - 0.1
                           delay:0
@@ -370,12 +378,6 @@
 -(void)keyboardWasHidden:(NSNotification*)aNotification {
     
     
-    CGRect curFrame =self.commentToolbar.frame;
-    CGRect tabbarFrame = self.tabBarController.tabBar.frame;
-    
-    curFrame.origin =   CGPointMake(curFrame.origin.x, tabbarFrame.origin.y - curFrame.size.height);
-    NSLog(@"// -- was hidden: origin %f",curFrame.origin.y);
-//    [self.commentToolbar setAutoresizingMask:UIViewAutoresizingFlexibleTopMargin];
 
 }
 @end

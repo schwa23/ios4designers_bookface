@@ -206,7 +206,7 @@
                     </connections>
                 </view>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="umO-SF-F7c">
-                    <rect key="frame" x="0.0" y="480" width="320" height="44"/>
+                    <rect key="frame" x="0.0" y="429" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <items/>
                 </toolbar>
