@@ -25,7 +25,7 @@
 		3348F74C18B71B1300F417DE /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348F74B18B71B1300F417DE /* Notification.m */; };
 		3348F75218B722EE00F417DE /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348F75018B722EE00F417DE /* NotificationsViewController.m */; };
 		3348F75318B722EE00F417DE /* NotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3348F75118B722EE00F417DE /* NotificationsViewController.xib */; };
-		3348F75518B72B8700F417DE /* notification_fixtures.js in Sources */ = {isa = PBXBuildFile; fileRef = 3348F75418B72B8700F417DE /* notification_fixtures.js */; };
+		3348F75518B72B8700F417DE /* notification_fixtures.js in Resources */ = {isa = PBXBuildFile; fileRef = 3348F75418B72B8700F417DE /* notification_fixtures.js */; };
 		3397355C18B1E72500A4C106 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3397355A18B1E72500A4C106 /* FeedViewController.m */; };
 		3397355D18B1E72500A4C106 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3397355B18B1E72500A4C106 /* FeedViewController.xib */; };
 		3397356118B4913200A4C106 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3397356018B4913200A4C106 /* FeedCell.m */; };
@@ -136,6 +136,7 @@
 		330DBEE118AB39E100B7E462 /* bookface */ = {
 			isa = PBXGroup;
 			children = (
+				3348F75618B72FC900F417DE /* Resources */,
 				339B4E4F18B5C755007A0782 /* Images.xcassets */,
 				330DBEEA18AB39E100B7E462 /* AppDelegate.h */,
 				330DBEEB18AB39E100B7E462 /* AppDelegate.m */,
@@ -151,7 +152,6 @@
 		330DBEE218AB39E100B7E462 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3348F75418B72B8700F417DE /* notification_fixtures.js */,
 				330DBEE318AB39E100B7E462 /* bookface-Info.plist */,
 				330DBEE418AB39E100B7E462 /* InfoPlist.strings */,
 				330DBEE718AB39E100B7E462 /* main.m */,
@@ -204,6 +204,14 @@
 				3348F75118B722EE00F417DE /* NotificationsViewController.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		3348F75618B72FC900F417DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3348F75418B72B8700F417DE /* notification_fixtures.js */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,6 +292,7 @@
 				330DBEE618AB39E100B7E462 /* InfoPlist.strings in Resources */,
 				3348F75318B722EE00F417DE /* NotificationsViewController.xib in Resources */,
 				339B4E5018B5C755007A0782 /* Images.xcassets in Resources */,
+				3348F75518B72B8700F417DE /* notification_fixtures.js in Resources */,
 				33317B8318ADE42200CB3DFD /* her_profile_image.jpg in Resources */,
 				330DBF0E18AB3A0E00B7E462 /* NewsPostViewController.xib in Resources */,
 				3397355D18B1E72500A4C106 /* FeedViewController.xib in Resources */,
@@ -310,7 +319,6 @@
 				3348F74C18B71B1300F417DE /* Notification.m in Sources */,
 				330DBEEC18AB39E100B7E462 /* AppDelegate.m in Sources */,
 				3397356118B4913200A4C106 /* FeedCell.m in Sources */,
-				3348F75518B72B8700F417DE /* notification_fixtures.js in Sources */,
 				3348F75218B722EE00F417DE /* NotificationsViewController.m in Sources */,
 				330DBF0D18AB3A0E00B7E462 /* NewsPostViewController.m in Sources */,
 				3397355C18B1E72500A4C106 /* FeedViewController.m in Sources */,

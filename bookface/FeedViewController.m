@@ -73,6 +73,9 @@
     
     self.view.separatorInset = UIEdgeInsetsMake(0, 0, 0, 0);
     
+    
+    
+    
 }
 
 - (void) viewWillAppear:(BOOL)animated  {

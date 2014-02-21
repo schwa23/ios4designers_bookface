@@ -30,26 +30,21 @@
 + (NSArray *) fakeNotifications {
     NSMutableArray *fakeNotifications = [[NSMutableArray alloc] init];
     
-    Notification *not1 = [[Notification alloc] initWithDictionary: @{@"body":@"Joshua Dickens posted a photo",
-                           @"updated": @"3 minutes ago",
-                           @"personName":@"Joshua Dickens",
-                           @"personImageUrl": @"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash2/t1/p320x320/1508523_10102622600085209_625927338_n.jpg",
-                           @"notificationIconName":@"heart"}];
+    NSString *path = [[NSBundle mainBundle] resourcePath];
+    //this seems hacky. Couldn't get
+    //    [NSBundle mainBundle] pathForResource:ofType:
+    // to return anything
     
-    Notification *not2 = [[Notification alloc] initWithDictionary: @{@"body":@"Chris Connolly posted a photo",
-                                                                      @"personName":@"Chris Connolly",
-                                                                     @"updated": @"5 minutes ago",
-                                                                     @"personImageUrl": @"https://fbcdn-profile-a.akamaihd.net/hprofile-ak-ash3/t1/p320x320/601968_10151402376036840_1924078178_n.jpg",
-                                                                     @"notificationIconName":@"heart"}];
+    NSString *filePath = [path stringByAppendingString:@"/notification_fixtures.js"];
+    
+    NSData *data = [[NSData alloc] initWithContentsOfFile:filePath];
+    NSArray *array = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
     
     
-    [fakeNotifications addObject:not1];
-    [fakeNotifications addObject:not2];
-    
-    
-    
+    for (NSDictionary *dict in array) {
+        [fakeNotifications addObject:[[Notification alloc] initWithDictionary:dict]];
+    }
     fakeNotifications = [fakeNotifications copy];
-    
     return fakeNotifications;
 }
 
