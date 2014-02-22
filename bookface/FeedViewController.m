@@ -10,6 +10,7 @@
 #import "NewsPostViewController.h"
 #import "FeedCell.h"
 #import "Notification.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface FeedViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *view;
@@ -112,6 +113,8 @@
     
     cell.notificationBodyLabel.text = not.body;
     cell.updateTimeLabel.text = not.updatedTime;
+    NSURL *imageUrl = [[NSURL alloc] initWithString:not.personImageUrl];
+    [cell.personImageView setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"profile_image_placeholder_68@"]];
     return cell;
     
     
