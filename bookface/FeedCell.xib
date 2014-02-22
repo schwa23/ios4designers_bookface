@@ -13,12 +13,13 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Qve-my-LAG" userLabel="personImage">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="her_profile_image.jpg" id="Qve-my-LAG" userLabel="personImage">
                         <rect key="frame" x="7" y="6" width="68" height="68"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.67843137249999996" green="0.69803921570000005" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UYB-O6-XcR" userLabel="bodyLabel">
-                        <rect key="frame" x="81" y="6" width="214" height="41"/>
+                        <rect key="frame" x="81" y="4" width="224" height="53"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <attributedString key="attributedText">
                             <fragment content="Joshua Dickens ">
@@ -29,7 +30,7 @@
                                     <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                 </attributes>
                             </fragment>
-                            <fragment content="posted a photo ">
+                            <fragment content="posted a photo to the group iOS Bootcamp for Designers">
                                 <attributes>
                                     <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <font key="NSFont" size="14" name=".LucidaGrandeUI"/>
@@ -39,12 +40,13 @@
                         </attributedString>
                         <nil key="highlightedColor"/>
                     </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ISo-PP-aei" userLabel="typeImage">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="her_profile_image.jpg" id="ISo-PP-aei" userLabel="typeImage">
                         <rect key="frame" x="83" y="58" width="16" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.67843137249999996" green="0.69803921570000005" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="24 minutes ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PSf-TN-2Pq" userLabel="updatedLabel">
-                        <rect key="frame" x="106" y="55" width="119" height="21"/>
+                        <rect key="frame" x="106" y="56" width="119" height="21"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.67843137254901964" green="0.69803921568627447" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
@@ -60,4 +62,7 @@
             </connections>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="her_profile_image.jpg" width="50" height="50"/>
+    </resources>
 </document>

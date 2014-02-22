@@ -13,6 +13,7 @@
 @interface AppDelegate ()
 
 
+
 @end
 
 @implementation AppDelegate
@@ -22,38 +23,62 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     
-   
+    NSArray *tabs = @[@{@"name": @"News Feed", @"image": @"feed_tab_img"},
+                      @{@"name" : @"Requests", @"image": @"requests_tab_img"},
+                      @{@"name" : @"Messages", @"image": @"messages_tab_img"},
+                      @{@"name" : @"Notifications", @"image": @"notifications_tab_img"},
+                      @{@"name" : @"More", @"image": @"more_tab_img"}];
     
-    NewsPostViewController *newsPostView = [[NewsPostViewController alloc] init];
-    FeedViewController *feedView = [[FeedViewController alloc] init];
-
-    UINavigationController *navController = [[UINavigationController alloc] init];
-    
-    navController.navigationBar.barTintColor = [UIColor
-                                                colorWithRed:68.0/255.0
-                                                green: 99.0/255.0
+    NSMutableArray *vcs = [[NSMutableArray alloc] init];
+    for (int i=0; i<tabs.count; i++) {
+        //do stuff
+        NSString *tabName = tabs[i][@"name"];
+        UINavigationController *nvc = [[UINavigationController alloc] init];
+        
+        
+        
+        nvc.navigationBar.barTintColor = [UIColor
+                                                    colorWithRed:68.0/255.0
+                                                    green: 99.0/255.0
                                                     blue: 161.0/255.0
                                                     alpha:1.0];
-    navController.navigationBar.tintColor = [UIColor whiteColor];
-    navController.navigationBar.translucent = NO;
-    navController.navigationBar.titleTextAttributes = [[NSDictionary alloc] initWithObjects:@[[UIColor whiteColor]] forKeys:@[NSForegroundColorAttributeName]];
+        nvc.navigationBar.tintColor = [UIColor whiteColor];
+        nvc.navigationBar.translucent = NO;
+        nvc.navigationBar.titleTextAttributes = [[NSDictionary alloc] initWithObjects:@[[UIColor whiteColor]] forKeys:@[NSForegroundColorAttributeName]];
+        
+        [nvc.tabBarItem setTitle:tabName];
+        [nvc.tabBarItem setImage:[UIImage imageNamed:tabs[i][@"image"]]];
+        
+        if([tabName  isEqual: @"Notifications"]) {
+            FeedViewController *feedView = [[FeedViewController alloc] init];
+
+            feedView.title = @"";
+            [nvc setViewControllers:@[feedView] animated:NO];
+            
+        } else {
+        
+            UILabel *placeholderLabel = [[UILabel alloc] initWithFrame:CGRectMake(10,100,300,40)];
+            placeholderLabel.text =tabs[i][@"name"];
+            [nvc.view addSubview:placeholderLabel];
+        }
+        [vcs addObject:nvc];
+        
+        
+    }
+
     
-    feedView.title = @"";
-    newsPostView.title = @"Post";
-//    [navController setViewControllers:@[feedView,newsPostView] animated:NO];
-    [navController setViewControllers:@[feedView] animated:NO];
-    [navController.tabBarItem setImage:[UIImage imageNamed:@"feed_tab_img"]];
-    [navController.tabBarItem setTitle:@"News Feed"];
+
     
     
     
+    //add our notifications tab at index 3 [akak tab 4]
     
 
     
     UITabBarController *tabBarController =[[UITabBarController alloc] init];
     
-    [tabBarController setViewControllers:@[navController]];
-    
+    [tabBarController setViewControllers:vcs];
+    [tabBarController setSelectedIndex:3];
     self.window.rootViewController = tabBarController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

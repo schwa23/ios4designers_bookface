@@ -52,7 +52,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.navigationItem setTitle:@"News Feed"];
+    [self.navigationItem setTitle:@"Notifications"];
     
     UIBarButtonItem *searchButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch target:self action:@selector(showSearch:)];
     UIBarButtonItem *listButton = [[UIBarButtonItem alloc] init];

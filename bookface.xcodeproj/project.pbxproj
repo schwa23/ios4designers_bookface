@@ -20,17 +20,21 @@
 		330DBF0118AB39E100B7E462 /* bookfaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 330DBF0018AB39E100B7E462 /* bookfaceTests.m */; };
 		330DBF0D18AB3A0E00B7E462 /* NewsPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330DBF0B18AB3A0E00B7E462 /* NewsPostViewController.m */; };
 		330DBF0E18AB3A0E00B7E462 /* NewsPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330DBF0C18AB3A0E00B7E462 /* NewsPostViewController.xib */; };
+		331D612218B823BF00CFD23D /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 331D612118B823BF00CFD23D /* CustomCell.m */; };
+		331D612418B823D600CFD23D /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331D612318B823D600CFD23D /* CustomCell.xib */; };
 		33317B8318ADE42200CB3DFD /* her_profile_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33317B8118ADE42200CB3DFD /* her_profile_image.jpg */; };
 		33317B8418ADE42200CB3DFD /* her_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33317B8218ADE42200CB3DFD /* her_image.jpg */; };
 		3348F74C18B71B1300F417DE /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348F74B18B71B1300F417DE /* Notification.m */; };
 		3348F75218B722EE00F417DE /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348F75018B722EE00F417DE /* NotificationsViewController.m */; };
 		3348F75318B722EE00F417DE /* NotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3348F75118B722EE00F417DE /* NotificationsViewController.xib */; };
 		3348F75518B72B8700F417DE /* notification_fixtures.js in Resources */ = {isa = PBXBuildFile; fileRef = 3348F75418B72B8700F417DE /* notification_fixtures.js */; };
+		3348F75818B73E7B00F417DE /* fb_notif_feed.json in Resources */ = {isa = PBXBuildFile; fileRef = 3348F75718B73E7B00F417DE /* fb_notif_feed.json */; };
 		3397355C18B1E72500A4C106 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3397355A18B1E72500A4C106 /* FeedViewController.m */; };
 		3397355D18B1E72500A4C106 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3397355B18B1E72500A4C106 /* FeedViewController.xib */; };
 		3397356118B4913200A4C106 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3397356018B4913200A4C106 /* FeedCell.m */; };
 		3397356318B4914800A4C106 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3397356218B4914800A4C106 /* FeedCell.xib */; };
 		339B4E5018B5C755007A0782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339B4E4F18B5C755007A0782 /* Images.xcassets */; };
+		A8202944266D4718A3ABA0F2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBC0F357CE043869DE5DE5C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,9 @@
 		330DBF0A18AB3A0E00B7E462 /* NewsPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsPostViewController.h; sourceTree = "<group>"; };
 		330DBF0B18AB3A0E00B7E462 /* NewsPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsPostViewController.m; sourceTree = "<group>"; };
 		330DBF0C18AB3A0E00B7E462 /* NewsPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsPostViewController.xib; sourceTree = "<group>"; };
+		331D612018B823BF00CFD23D /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		331D612118B823BF00CFD23D /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		331D612318B823D600CFD23D /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		33317B8118ADE42200CB3DFD /* her_profile_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = her_profile_image.jpg; sourceTree = "<group>"; };
 		33317B8218ADE42200CB3DFD /* her_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = her_image.jpg; sourceTree = "<group>"; };
 		3348F74A18B71B1300F417DE /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
@@ -70,6 +77,7 @@
 		3348F75018B722EE00F417DE /* NotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewController.m; sourceTree = "<group>"; };
 		3348F75118B722EE00F417DE /* NotificationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationsViewController.xib; sourceTree = "<group>"; };
 		3348F75418B72B8700F417DE /* notification_fixtures.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = notification_fixtures.js; sourceTree = "<group>"; };
+		3348F75718B73E7B00F417DE /* fb_notif_feed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fb_notif_feed.json; sourceTree = "<group>"; };
 		3397355918B1E72500A4C106 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
 		3397355A18B1E72500A4C106 /* FeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedViewController.m; sourceTree = "<group>"; };
 		3397355B18B1E72500A4C106 /* FeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
@@ -77,6 +85,8 @@
 		3397356018B4913200A4C106 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
 		3397356218B4914800A4C106 /* FeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
 		339B4E4F18B5C755007A0782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5BBC0F357CE043869DE5DE5C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		67DAED5EA25B4213A48B7754 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +97,7 @@
 				330DBEDE18AB39E100B7E462 /* CoreGraphics.framework in Frameworks */,
 				330DBEE018AB39E100B7E462 /* UIKit.framework in Frameworks */,
 				330DBEDC18AB39E100B7E462 /* Foundation.framework in Frameworks */,
+				A8202944266D4718A3ABA0F2 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +121,7 @@
 				330DBEFA18AB39E100B7E462 /* bookfaceTests */,
 				330DBEDA18AB39E100B7E462 /* Frameworks */,
 				330DBED918AB39E100B7E462 /* Products */,
+				67DAED5EA25B4213A48B7754 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -129,6 +141,7 @@
 				330DBEDD18AB39E100B7E462 /* CoreGraphics.framework */,
 				330DBEDF18AB39E100B7E462 /* UIKit.framework */,
 				330DBEF418AB39E100B7E462 /* XCTest.framework */,
+				5BBC0F357CE043869DE5DE5C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -145,6 +158,9 @@
 				330DBEE218AB39E100B7E462 /* Supporting Files */,
 				3348F74E18B71B2000F417DE /* Views */,
 				3348F74D18B71B1700F417DE /* Models */,
+				331D612018B823BF00CFD23D /* CustomCell.h */,
+				331D612118B823BF00CFD23D /* CustomCell.m */,
+				331D612318B823D600CFD23D /* CustomCell.xib */,
 			);
 			path = bookface;
 			sourceTree = "<group>";
@@ -210,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				3348F75418B72B8700F417DE /* notification_fixtures.js */,
+				3348F75718B73E7B00F417DE /* fb_notif_feed.json */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -221,9 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 330DBF0418AB39E100B7E462 /* Build configuration list for PBXNativeTarget "bookface" */;
 			buildPhases = (
+				82D47C91B71A48D59900112B /* Check Pods Manifest.lock */,
 				330DBED418AB39E100B7E462 /* Sources */,
 				330DBED518AB39E100B7E462 /* Frameworks */,
 				330DBED618AB39E100B7E462 /* Resources */,
+				662AD267D4EF454AB10E80B8 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -290,6 +309,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				330DBEE618AB39E100B7E462 /* InfoPlist.strings in Resources */,
+				331D612418B823D600CFD23D /* CustomCell.xib in Resources */,
+				3348F75818B73E7B00F417DE /* fb_notif_feed.json in Resources */,
 				3348F75318B722EE00F417DE /* NotificationsViewController.xib in Resources */,
 				339B4E5018B5C755007A0782 /* Images.xcassets in Resources */,
 				3348F75518B72B8700F417DE /* notification_fixtures.js in Resources */,
@@ -311,6 +332,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		662AD267D4EF454AB10E80B8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82D47C91B71A48D59900112B /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		330DBED418AB39E100B7E462 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -318,6 +372,7 @@
 			files = (
 				3348F74C18B71B1300F417DE /* Notification.m in Sources */,
 				330DBEEC18AB39E100B7E462 /* AppDelegate.m in Sources */,
+				331D612218B823BF00CFD23D /* CustomCell.m in Sources */,
 				3397356118B4913200A4C106 /* FeedCell.m in Sources */,
 				3348F75218B722EE00F417DE /* NotificationsViewController.m in Sources */,
 				330DBF0D18AB3A0E00B7E462 /* NewsPostViewController.m in Sources */,
@@ -438,6 +493,7 @@
 		};
 		330DBF0518AB39E100B7E462 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67DAED5EA25B4213A48B7754 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -451,6 +507,7 @@
 		};
 		330DBF0618AB39E100B7E462 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67DAED5EA25B4213A48B7754 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
