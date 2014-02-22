@@ -22,6 +22,7 @@
 		330DBF0E18AB3A0E00B7E462 /* NewsPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330DBF0C18AB3A0E00B7E462 /* NewsPostViewController.xib */; };
 		331D612218B823BF00CFD23D /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 331D612118B823BF00CFD23D /* CustomCell.m */; };
 		331D612418B823D600CFD23D /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331D612318B823D600CFD23D /* CustomCell.xib */; };
+		331D612618B8287F00CFD23D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 331D612518B8287F00CFD23D /* Images.xcassets */; };
 		33317B8318ADE42200CB3DFD /* her_profile_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33317B8118ADE42200CB3DFD /* her_profile_image.jpg */; };
 		33317B8418ADE42200CB3DFD /* her_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33317B8218ADE42200CB3DFD /* her_image.jpg */; };
 		3348F74C18B71B1300F417DE /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348F74B18B71B1300F417DE /* Notification.m */; };
@@ -33,7 +34,6 @@
 		3397355D18B1E72500A4C106 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3397355B18B1E72500A4C106 /* FeedViewController.xib */; };
 		3397356118B4913200A4C106 /* FeedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3397356018B4913200A4C106 /* FeedCell.m */; };
 		3397356318B4914800A4C106 /* FeedCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3397356218B4914800A4C106 /* FeedCell.xib */; };
-		339B4E5018B5C755007A0782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339B4E4F18B5C755007A0782 /* Images.xcassets */; };
 		A8202944266D4718A3ABA0F2 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BBC0F357CE043869DE5DE5C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +69,7 @@
 		331D612018B823BF00CFD23D /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		331D612118B823BF00CFD23D /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
 		331D612318B823D600CFD23D /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		331D612518B8287F00CFD23D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		33317B8118ADE42200CB3DFD /* her_profile_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = her_profile_image.jpg; sourceTree = "<group>"; };
 		33317B8218ADE42200CB3DFD /* her_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = her_image.jpg; sourceTree = "<group>"; };
 		3348F74A18B71B1300F417DE /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
@@ -84,7 +85,6 @@
 		3397355F18B4913200A4C106 /* FeedCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedCell.h; sourceTree = "<group>"; };
 		3397356018B4913200A4C106 /* FeedCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedCell.m; sourceTree = "<group>"; };
 		3397356218B4914800A4C106 /* FeedCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedCell.xib; sourceTree = "<group>"; };
-		339B4E4F18B5C755007A0782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5BBC0F357CE043869DE5DE5C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		67DAED5EA25B4213A48B7754 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -149,8 +149,8 @@
 		330DBEE118AB39E100B7E462 /* bookface */ = {
 			isa = PBXGroup;
 			children = (
+				331D612518B8287F00CFD23D /* Images.xcassets */,
 				3348F75618B72FC900F417DE /* Resources */,
-				339B4E4F18B5C755007A0782 /* Images.xcassets */,
 				330DBEEA18AB39E100B7E462 /* AppDelegate.h */,
 				330DBEEB18AB39E100B7E462 /* AppDelegate.m */,
 				33317B8118ADE42200CB3DFD /* her_profile_image.jpg */,
@@ -312,7 +312,7 @@
 				331D612418B823D600CFD23D /* CustomCell.xib in Resources */,
 				3348F75818B73E7B00F417DE /* fb_notif_feed.json in Resources */,
 				3348F75318B722EE00F417DE /* NotificationsViewController.xib in Resources */,
-				339B4E5018B5C755007A0782 /* Images.xcassets in Resources */,
+				331D612618B8287F00CFD23D /* Images.xcassets in Resources */,
 				3348F75518B72B8700F417DE /* notification_fixtures.js in Resources */,
 				33317B8318ADE42200CB3DFD /* her_profile_image.jpg in Resources */,
 				330DBF0E18AB3A0E00B7E462 /* NewsPostViewController.xib in Resources */,
