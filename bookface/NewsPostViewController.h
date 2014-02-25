@@ -12,6 +12,6 @@
 @interface NewsPostViewController : UIViewController
 
 -(id)initWithTitle:(NSString *)title;
--(id)initWIthNotification:(Notification *)notification;
+-(id)initWithNotification:(Notification *)notification;
 
 @end

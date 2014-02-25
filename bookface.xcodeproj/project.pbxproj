@@ -20,14 +20,12 @@
 		330DBF0118AB39E100B7E462 /* bookfaceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 330DBF0018AB39E100B7E462 /* bookfaceTests.m */; };
 		330DBF0D18AB3A0E00B7E462 /* NewsPostViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330DBF0B18AB3A0E00B7E462 /* NewsPostViewController.m */; };
 		330DBF0E18AB3A0E00B7E462 /* NewsPostViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330DBF0C18AB3A0E00B7E462 /* NewsPostViewController.xib */; };
-		331D612218B823BF00CFD23D /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 331D612118B823BF00CFD23D /* CustomCell.m */; };
-		331D612418B823D600CFD23D /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 331D612318B823D600CFD23D /* CustomCell.xib */; };
 		331D612618B8287F00CFD23D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 331D612518B8287F00CFD23D /* Images.xcassets */; };
+		331D612A18BAFA1F00CFD23D /* Bookmark Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 331D612918BAFA1F00CFD23D /* Bookmark Icons.xcassets */; };
+		331D612E18BB0F2B00CFD23D /* NSString+HTMLAttributedString.m in Sources */ = {isa = PBXBuildFile; fileRef = 331D612D18BB0F2B00CFD23D /* NSString+HTMLAttributedString.m */; };
 		33317B8318ADE42200CB3DFD /* her_profile_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33317B8118ADE42200CB3DFD /* her_profile_image.jpg */; };
 		33317B8418ADE42200CB3DFD /* her_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33317B8218ADE42200CB3DFD /* her_image.jpg */; };
 		3348F74C18B71B1300F417DE /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348F74B18B71B1300F417DE /* Notification.m */; };
-		3348F75218B722EE00F417DE /* NotificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3348F75018B722EE00F417DE /* NotificationsViewController.m */; };
-		3348F75318B722EE00F417DE /* NotificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3348F75118B722EE00F417DE /* NotificationsViewController.xib */; };
 		3348F75518B72B8700F417DE /* notification_fixtures.js in Resources */ = {isa = PBXBuildFile; fileRef = 3348F75418B72B8700F417DE /* notification_fixtures.js */; };
 		3348F75818B73E7B00F417DE /* fb_notif_feed.json in Resources */ = {isa = PBXBuildFile; fileRef = 3348F75718B73E7B00F417DE /* fb_notif_feed.json */; };
 		3397355C18B1E72500A4C106 /* FeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3397355A18B1E72500A4C106 /* FeedViewController.m */; };
@@ -66,17 +64,14 @@
 		330DBF0A18AB3A0E00B7E462 /* NewsPostViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsPostViewController.h; sourceTree = "<group>"; };
 		330DBF0B18AB3A0E00B7E462 /* NewsPostViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsPostViewController.m; sourceTree = "<group>"; };
 		330DBF0C18AB3A0E00B7E462 /* NewsPostViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewsPostViewController.xib; sourceTree = "<group>"; };
-		331D612018B823BF00CFD23D /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
-		331D612118B823BF00CFD23D /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
-		331D612318B823D600CFD23D /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		331D612518B8287F00CFD23D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		331D612918BAFA1F00CFD23D /* Bookmark Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Bookmark Icons.xcassets"; sourceTree = "<group>"; };
+		331D612C18BB0F2B00CFD23D /* NSString+HTMLAttributedString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+HTMLAttributedString.h"; sourceTree = "<group>"; };
+		331D612D18BB0F2B00CFD23D /* NSString+HTMLAttributedString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+HTMLAttributedString.m"; sourceTree = "<group>"; };
 		33317B8118ADE42200CB3DFD /* her_profile_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = her_profile_image.jpg; sourceTree = "<group>"; };
 		33317B8218ADE42200CB3DFD /* her_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = her_image.jpg; sourceTree = "<group>"; };
 		3348F74A18B71B1300F417DE /* Notification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
 		3348F74B18B71B1300F417DE /* Notification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
-		3348F74F18B722EE00F417DE /* NotificationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationsViewController.h; sourceTree = "<group>"; };
-		3348F75018B722EE00F417DE /* NotificationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationsViewController.m; sourceTree = "<group>"; };
-		3348F75118B722EE00F417DE /* NotificationsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotificationsViewController.xib; sourceTree = "<group>"; };
 		3348F75418B72B8700F417DE /* notification_fixtures.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = notification_fixtures.js; sourceTree = "<group>"; };
 		3348F75718B73E7B00F417DE /* fb_notif_feed.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fb_notif_feed.json; sourceTree = "<group>"; };
 		3397355918B1E72500A4C106 /* FeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedViewController.h; sourceTree = "<group>"; };
@@ -149,6 +144,8 @@
 		330DBEE118AB39E100B7E462 /* bookface */ = {
 			isa = PBXGroup;
 			children = (
+				331D612C18BB0F2B00CFD23D /* NSString+HTMLAttributedString.h */,
+				331D612D18BB0F2B00CFD23D /* NSString+HTMLAttributedString.m */,
 				331D612518B8287F00CFD23D /* Images.xcassets */,
 				3348F75618B72FC900F417DE /* Resources */,
 				330DBEEA18AB39E100B7E462 /* AppDelegate.h */,
@@ -158,9 +155,6 @@
 				330DBEE218AB39E100B7E462 /* Supporting Files */,
 				3348F74E18B71B2000F417DE /* Views */,
 				3348F74D18B71B1700F417DE /* Models */,
-				331D612018B823BF00CFD23D /* CustomCell.h */,
-				331D612118B823BF00CFD23D /* CustomCell.m */,
-				331D612318B823D600CFD23D /* CustomCell.xib */,
 			);
 			path = bookface;
 			sourceTree = "<group>";
@@ -215,9 +209,6 @@
 				3397355F18B4913200A4C106 /* FeedCell.h */,
 				3397356018B4913200A4C106 /* FeedCell.m */,
 				3397356218B4914800A4C106 /* FeedCell.xib */,
-				3348F74F18B722EE00F417DE /* NotificationsViewController.h */,
-				3348F75018B722EE00F417DE /* NotificationsViewController.m */,
-				3348F75118B722EE00F417DE /* NotificationsViewController.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -225,6 +216,7 @@
 		3348F75618B72FC900F417DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				331D612918BAFA1F00CFD23D /* Bookmark Icons.xcassets */,
 				3348F75418B72B8700F417DE /* notification_fixtures.js */,
 				3348F75718B73E7B00F417DE /* fb_notif_feed.json */,
 			);
@@ -309,13 +301,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				330DBEE618AB39E100B7E462 /* InfoPlist.strings in Resources */,
-				331D612418B823D600CFD23D /* CustomCell.xib in Resources */,
 				3348F75818B73E7B00F417DE /* fb_notif_feed.json in Resources */,
-				3348F75318B722EE00F417DE /* NotificationsViewController.xib in Resources */,
 				331D612618B8287F00CFD23D /* Images.xcassets in Resources */,
 				3348F75518B72B8700F417DE /* notification_fixtures.js in Resources */,
 				33317B8318ADE42200CB3DFD /* her_profile_image.jpg in Resources */,
 				330DBF0E18AB3A0E00B7E462 /* NewsPostViewController.xib in Resources */,
+				331D612A18BAFA1F00CFD23D /* Bookmark Icons.xcassets in Resources */,
 				3397355D18B1E72500A4C106 /* FeedViewController.xib in Resources */,
 				3397356318B4914800A4C106 /* FeedCell.xib in Resources */,
 				33317B8418ADE42200CB3DFD /* her_image.jpg in Resources */,
@@ -372,9 +363,8 @@
 			files = (
 				3348F74C18B71B1300F417DE /* Notification.m in Sources */,
 				330DBEEC18AB39E100B7E462 /* AppDelegate.m in Sources */,
-				331D612218B823BF00CFD23D /* CustomCell.m in Sources */,
 				3397356118B4913200A4C106 /* FeedCell.m in Sources */,
-				3348F75218B722EE00F417DE /* NotificationsViewController.m in Sources */,
+				331D612E18BB0F2B00CFD23D /* NSString+HTMLAttributedString.m in Sources */,
 				330DBF0D18AB3A0E00B7E462 /* NewsPostViewController.m in Sources */,
 				3397355C18B1E72500A4C106 /* FeedViewController.m in Sources */,
 				330DBEE818AB39E100B7E462 /* main.m in Sources */,

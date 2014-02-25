@@ -7,10 +7,13 @@
 //
 
 #import "FeedCell.h"
+#import "Notification.h"
+#import "NSString+HTMLAttributedString.h"
 
 @interface FeedCell ()
 
-@property (weak, nonatomic) UILabel* bodyLabel;
+
+-(void)setupCellForNotification:(Notification *) notification;
 
 @end
 
@@ -31,5 +34,30 @@
 
     // Configure the view for the selected state
 }
+
+-(void)setupCellForNotification:(Notification *) notification {
+//    @property (weak, nonatomic) IBOutlet UIImageView *personImageView;
+//    @property (weak, nonatomic) IBOutlet UILabel *notificationBodyLabel;
+//    @property (weak, nonatomic) IBOutlet UILabel *updateTimeLabel;
+//    @property (weak, nonatomic) IBOutlet UIImageView *notificationIconView;
+    
+    NSString *bodyHtml = notification.body;
+    
+    //wrap the thing in a paragraph tag or weird stuff happens.
+    bodyHtml = [NSString stringWithFormat:@"<p>%@</p>",bodyHtml];
+    
+    NSAttributedString *bodyStyled = [NSString attributedStringWithHTML:bodyHtml style:nil];
+    
+    NSMutableAttributedString *bodyMStyled = [[NSMutableAttributedString alloc] initWithAttributedString:bodyStyled];
+   
+    [bodyMStyled fixAttributesInRange:NSRangeFromString([NSString stringWithFormat:@"0,%lu",(unsigned long)bodyStyled.string.length])];
+    
+    self.notificationBodyLabel.attributedText=bodyMStyled;
+    
+    NSString *iconName = [NSString stringWithFormat:@"icon-%@-16px", notification.notificationIconName];
+    
+    self.notificationIconView.image = [UIImage imageNamed:iconName];
+}
+
 
 @end

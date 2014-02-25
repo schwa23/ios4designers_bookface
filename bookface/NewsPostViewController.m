@@ -8,6 +8,8 @@
 
 #import "NewsPostViewController.h"
 #import "Notification.h"
+#import "NSString+HTMLAttributedString.h"
+
 
 @interface NewsPostViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *tabbar;
@@ -71,13 +73,12 @@
 }
 
 
--(id)initWIthNotification:(Notification *)notification {
+-(id)initWithNotification:(Notification *)notification {
     self = [super initWithNibName:nil bundle:nil];
     
     if (self) {
         self.title = notification.body;
         self.updatedTime = notification.updatedTime;
-        
     }
     return self;
 }
@@ -92,7 +93,10 @@
     [self initPostContentView];
     
     self.postTitleLabel.text = self.title;
+    
+    self.postTitleLabel.attributedText = [NSString attributedStringWithHTML:self.title style:nil];
     self.updatedTimeLabel.text = self.updatedTime;
+    
     
     UIToolbar *cbar = self.commentToolbar;
     

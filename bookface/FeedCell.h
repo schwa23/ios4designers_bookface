@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Notification.h"
 
 @interface FeedCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UIImageView *personImageView;
-@property (weak, nonatomic) IBOutlet UILabel *notificationBodyLabel;
-@property (weak, nonatomic) IBOutlet UILabel *updateTimeLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *notificationIconView;
+@property (strong, nonatomic) IBOutlet UIImageView *personImageView;
+@property (strong, nonatomic) IBOutlet UILabel *notificationBodyLabel;
+@property (strong, nonatomic) IBOutlet UILabel *updateTimeLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *notificationIconView;
+
+-(void)setupCellForNotification:(Notification *) notification;
+
 
 @end

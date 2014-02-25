@@ -111,17 +111,23 @@
     
     Notification *not = self.feeddata[indexPath.row];
     
-    cell.notificationBodyLabel.text = not.body;
+//    cell.notificationBodyLabel.attributedText = [not.body attributedStringFromTaggedStringWithFontsAndColors:@[[UIFont systemFontOfSize:14]], nil];
+
+    [cell setupCellForNotification:not];
+    
+    
     cell.updateTimeLabel.text = not.updatedTime;
     NSURL *imageUrl = [[NSURL alloc] initWithString:not.personImageUrl];
     [cell.personImageView setImageWithURL:imageUrl placeholderImage:[UIImage imageNamed:@"profile_image_placeholder_68@"]];
+    
+    
     return cell;
     
     
 }
 
-- (float)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 80;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80.0f;
 }
 
 
@@ -134,7 +140,7 @@
 //    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     Notification *not = self.feeddata[indexPath.row];
-    NewsPostViewController *postView = [[NewsPostViewController alloc] initWIthNotification:not];
+    NewsPostViewController *postView = [[NewsPostViewController alloc] initWithNotification:not];
     [self.navigationController pushViewController:postView animated:YES];
 }
 
